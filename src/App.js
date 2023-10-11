@@ -1,12 +1,14 @@
-import './App.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
-//! Components
-import Product from "./components/Product"
+import "./App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import Routes from "./components/Routes";
+import { RouterProvider } from "react-router-dom";
+
+//!New React Router
 
 function App() {
   return (
     <div className="App">
-      <Product/>
+      <RouterProvider router={Routes} />
     </div>
   );
 }

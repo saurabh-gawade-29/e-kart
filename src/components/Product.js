@@ -1,23 +1,39 @@
 import React, { useEffect, useState } from "react";
+import Cards from "./Cards";
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
+
+const baseURL = "https://api.escuelajs.co/api/v1/products";
 
 const Product = () => {
   const [products, getProducts] = useState([]);
+
   useEffect(() => {
-    debugger
-    fetch("https://fakestoreapi.com/products")
-      .then((data) => {
-        console.log(data, "API Response Data");
-        data.json();
-      })
-      .then((result) => {
-        console.log(result, "API DATA.JSON");
-        getProducts(result);
-      });
+    debugger;
+    getData();
   }, []);
+
+  //! Using Async Await
+  const getData = async () => {
+    debugger;
+    let resp = await fetch(baseURL);
+    let parsedData = await resp.json();
+    let dataSlice = parsedData.slice(0, 48);
+    getProducts(dataSlice);
+  };
+
+  const mappedCards = products.map((items, i) => {
+    console.log(items, "items");
+    return (
+      <Col sm={12} md={3} lg={2} key={i} className="mb-2">
+        <Cards item={items} />
+      </Col>
+    );
+  });
   return (
-    <div>
-      <h1>Product</h1>
-      <p>{JSON.stringify(products)}</p>
+    <div className="my-4">
+      <Row className="m-0">{mappedCards}</Row>
     </div>
   );
 };
