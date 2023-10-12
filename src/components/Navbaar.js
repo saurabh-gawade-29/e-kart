@@ -16,10 +16,12 @@ function Navbaar() {
             navbarScroll
           >
             <Nav.Link to="/" as={Link} className="navLink">
-              Products
+              PRODUCTS
             </Nav.Link>
+          </Nav>
+          <Nav>
             <Nav.Link to="/cart" as={Link} className="navLink">
-              My Bag 0
+              MY BAG 0
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>

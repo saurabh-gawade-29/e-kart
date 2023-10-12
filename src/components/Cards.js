@@ -19,9 +19,9 @@ const Cards = ({ item }) => {
         style={myCardImgStyle}
       />
       <Card.Body>
-        <Card.Title className="text-truncate">{item.title}</Card.Title>
+        <Card.Title className="text-truncate" data-toggle="tooltip" title={item.title}>{item.title}</Card.Title>
         <Card.Text>Rupees: {item.price}</Card.Text>
-        <Card.Text className="card-desc">{item.description}</Card.Text>
+        <Card.Text className="card-desc" data-toggle="tooltip" title={item.description}>{item.description}</Card.Text>
         <Button variant="secondary">Add To Cart</Button>
       </Card.Body>
     </Card>
