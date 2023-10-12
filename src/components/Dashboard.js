@@ -3,7 +3,7 @@ import Product from "./Product";
 
 const Dashboard = () => {
   return (
-    <div>
+    <div className="Product-comp-wrap">
       <Product />
     </div>
   );

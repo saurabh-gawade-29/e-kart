@@ -16,6 +16,11 @@
   color: var(--black) !important;
 }
 
+/* Product */
+.Product-comp-wrap{
+  margin-top: 4rem;
+}
+
 /* Cards */
 .wrap-card:hover {
   transform: scale(1.03);
