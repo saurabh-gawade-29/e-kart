@@ -18,7 +18,7 @@ const Cards = ({ item }) => {
         className="img-fluid"
         style={myCardImgStyle}
       />
-      <Card.Body>
+      <Card.Body className="bg-card-body">
         <Card.Title className="text-truncate" data-toggle="tooltip" title={item.title}>{item.title}</Card.Title>
         <Card.Text>Rupees: {item.price}</Card.Text>
         <Card.Text className="card-desc" data-toggle="tooltip" title={item.description}>{item.description}</Card.Text>

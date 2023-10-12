@@ -1,23 +1,23 @@
 /* Navbar */
-.my-navbar{
+.my-navbar {
   background-color: var(--golden);
 }
 
-.navLink{
+.navLink {
   margin: 0rem 0.5rem;
   font-weight: bold;
 }
 
-.navLink:hover{
+.navLink:hover {
   color: var(--black) !important;
 }
 
-.navLink:focus{
-  color:var(--black) !important;
+.navLink:focus {
+  color: var(--black) !important;
 }
 
 /* Cards */
-.wrap-card:hover{
+.wrap-card:hover {
   transform: scale(1.03);
 }
 .rating {
@@ -27,6 +27,10 @@
   position: absolute;
   right: 0px;
   top: 0px;
+}
+
+.bg-card-body {
+  background-color: var(--white);
 }
 
 .card-desc {
