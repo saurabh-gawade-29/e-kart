@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from "react";
 import Cards from "./Cards";
-import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
-const baseURL = "https://api.escuelajs.co/api/v1/products";
+const baseURL = "https://fakestoreapi.com/products";
 
 const Product = () => {
   const [products, getProducts] = useState([]);
@@ -26,7 +25,7 @@ const Product = () => {
   const mappedCards = products.map((items, i) => {
     console.log(items, "items");
     return (
-      <Col sm={12} md={3} lg={2} key={i} className="mb-2">
+      <Col sm={12} md={3} lg={3} key={i} className="mb-2">
         <Cards item={items} />
       </Col>
     );
