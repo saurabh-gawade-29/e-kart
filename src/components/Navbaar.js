@@ -5,9 +5,9 @@ import { Link } from "react-router-dom";
 
 function Navbaar() {
   return (
-    <Navbar expand="lg" className="bg-body-tertiary">
+    <Navbar expand="lg" className="bg-body-tertiary shadow my-navbar">
       <Container fluid>
-        <Navbar.Brand>E-Kart</Navbar.Brand>
+        <Navbar.Brand className="fw-bold">🛒 E-Kart</Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav
@@ -15,10 +15,10 @@ function Navbaar() {
             style={{ maxHeight: "100px" }}
             navbarScroll
           >
-            <Nav.Link to="/" as={Link}>
+            <Nav.Link to="/" as={Link} className="navLink">
               Products
             </Nav.Link>
-            <Nav.Link to="/cart" as={Link}>
+            <Nav.Link to="/cart" as={Link} className="navLink">
               My Bag 0
             </Nav.Link>
           </Nav>

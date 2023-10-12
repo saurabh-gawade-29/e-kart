@@ -3,19 +3,20 @@ import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import PropTypes from "prop-types";
 
-const myCardStyle = {
+const myCardImgStyle = {
   height: "200px",
   objectFit: "contain",
 };
 const Cards = ({ item }) => {
   debugger;
   return (
-    <Card className="shadow">
+    <Card className="shadow wrap-card">
+      <span className="text-muted rating">⭐{item.rating.rate}</span>
       <Card.Img
         variant="top"
         src={item.image}
         className="img-fluid"
-        style={myCardStyle}
+        style={myCardImgStyle}
       />
       <Card.Body>
         <Card.Title className="text-truncate">{item.title}</Card.Title>

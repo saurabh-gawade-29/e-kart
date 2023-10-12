@@ -1,3 +1,34 @@
+/* Navbar */
+.my-navbar{
+  background-color: var(--golden);
+}
+
+.navLink{
+  margin: 0rem 0.5rem;
+  font-weight: bold;
+}
+
+.navLink:hover{
+  color: var(--black) !important;
+}
+
+.navLink:focus{
+  color:var(--black) !important;
+}
+
+/* Cards */
+.wrap-card:hover{
+  /* transform: ; */
+}
+.rating {
+  width: 60px;
+  padding: 0.2rem 0.5rem;
+  background-color: var(--golden);
+  position: absolute;
+  right: 0px;
+  top: 0px;
+}
+
 .card-desc {
   display: -webkit-box;
   -webkit-line-clamp: 2;

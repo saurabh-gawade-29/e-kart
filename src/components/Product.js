@@ -18,14 +18,13 @@ const Product = () => {
     debugger;
     let resp = await fetch(baseURL);
     let parsedData = await resp.json();
-    let dataSlice = parsedData.slice(0, 48);
-    getProducts(dataSlice);
+    getProducts(parsedData);
   };
 
   const mappedCards = products.map((items, i) => {
     console.log(items, "items");
     return (
-      <Col sm={12} md={3} lg={3} key={i} className="mb-2">
+      <Col sm={12} md={3} lg={3} key={i} className="mb-4">
         <Cards item={items} />
       </Col>
     );
