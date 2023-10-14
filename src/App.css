@@ -4,8 +4,8 @@
 }
 
 .navLink {
+  color: var(--white) !important;
   margin: 0rem 0.5rem;
-  font-weight: bold;
 }
 
 .navLink:hover {
@@ -13,6 +13,7 @@
 }
 
 .navLink:focus {
+  font-weight: bold;
   color: var(--white) !important;
 }
 
