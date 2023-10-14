@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Cards from "./Cards";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import { trackPromise } from "react-promise-tracker";
 
 const baseURL = "https://fakestoreapi.com/products";
 
@@ -16,7 +17,7 @@ const Product = () => {
   //! Using Async Await
   const getData = async () => {
     debugger;
-    let resp = await fetch(baseURL);
+    let resp = await trackPromise(fetch(baseURL));
     let parsedData = await resp.json();
     getProducts(parsedData);
   };
@@ -24,7 +25,7 @@ const Product = () => {
   const mappedCards = products.map((items, i) => {
     console.log(items, "items");
     return (
-      <Col sm={12} md={3} lg={3} key={i} className="mb-4">
+      <Col sm={12} md={4} lg={3} key={i} className="mb-4">
         <Cards item={items} />
       </Col>
     );

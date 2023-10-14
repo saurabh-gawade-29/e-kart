@@ -20,13 +20,13 @@ const Cards = ({ item }) => {
       />
       <Card.Body className="bg-card-body">
         <Card.Title
-          className="text-truncate"
+          className="text-truncate fw-bold"
           data-toggle="tooltip"
           title={item.title}
         >
           {item.title}
         </Card.Title>
-        <Card.Text>Rupees: {item.price}</Card.Text>
+        <Card.Text>₹ {item.price}</Card.Text>
         <Card.Text
           className="card-desc"
           data-toggle="tooltip"
