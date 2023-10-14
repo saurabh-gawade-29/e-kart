@@ -56,3 +56,10 @@
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
+
+@media (max-width: 992px) {
+  /* CSS styles for large devices */
+  .arrowUp {
+    display: none;
+  }
+}
