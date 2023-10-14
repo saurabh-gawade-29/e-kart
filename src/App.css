@@ -9,16 +9,16 @@
 }
 
 .navLink:hover {
-  color: var(--black) !important;
+  color: var(--white) !important;
 }
 
 .navLink:focus {
-  color: var(--black) !important;
+  color: var(--white) !important;
 }
 
 /* Product */
-.Product-comp-wrap{
-  margin-top: 4rem;
+.Product-comp-wrap {
+  margin-top: 5rem;
 }
 
 /* Cards */

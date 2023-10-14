@@ -11,7 +11,7 @@ const Cards = ({ item }) => {
   debugger;
   return (
     <Card className="shadow wrap-card">
-      <span className="text-muted rating">⭐{item.rating.rate}</span>
+      <span className="text-white rating">⭐{item.rating.rate}</span>
       <Card.Img
         variant="top"
         src={item.image}
@@ -19,9 +19,21 @@ const Cards = ({ item }) => {
         style={myCardImgStyle}
       />
       <Card.Body className="bg-card-body">
-        <Card.Title className="text-truncate" data-toggle="tooltip" title={item.title}>{item.title}</Card.Title>
+        <Card.Title
+          className="text-truncate"
+          data-toggle="tooltip"
+          title={item.title}
+        >
+          {item.title}
+        </Card.Title>
         <Card.Text>Rupees: {item.price}</Card.Text>
-        <Card.Text className="card-desc" data-toggle="tooltip" title={item.description}>{item.description}</Card.Text>
+        <Card.Text
+          className="card-desc"
+          data-toggle="tooltip"
+          title={item.description}
+        >
+          {item.description}
+        </Card.Text>
         <Button variant="secondary">Add To Cart</Button>
       </Card.Body>
     </Card>
