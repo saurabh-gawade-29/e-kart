@@ -23,6 +23,11 @@
   color: var(--white) !important;
 }
 
+/* !Override */
+.navbar-toggler {
+  background: #b89062 !important;
+}
+
 /* Product */
 .Product-comp-wrap {
   margin-top: 5rem;

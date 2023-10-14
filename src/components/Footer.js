@@ -4,7 +4,7 @@ import Container from "react-bootstrap/Container";
 
 const Footer = () => {
   return (
-    <footer className="shadow">
+    <footer className="shadow fixed-bottom bg-white">
       <Container>
         <p className="m-0 py-1">
           <marquee behavior="" direction="">
