@@ -17,7 +17,7 @@ const Product = () => {
   //! Using Async Await
   const getData = async () => {
     debugger;
-    let resp = await trackPromise(fetch(baseURL));
+    let resp = trackPromise(await fetch(baseURL));
     let parsedData = await resp.json();
     getProducts(parsedData);
   };

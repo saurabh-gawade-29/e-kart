@@ -4,9 +4,7 @@ import { usePromiseTracker } from "react-promise-tracker";
 const Spinner = () => {
   const myStyle = {
     height: "100vh",
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "",
+    textAlign: "center",
   };
   const { promiseInProgress } = usePromiseTracker();
   return (
@@ -29,9 +27,6 @@ const Spinner = () => {
             <span className="visually-hidden">Loading...</span>
           </div>
           <div className="spinner-grow text-info" role="status">
-            <span className="visually-hidden">Loading...</span>
-          </div>
-          <div className="spinner-grow text-light" role="status">
             <span className="visually-hidden">Loading...</span>
           </div>
           <div className="spinner-grow text-dark" role="status">
