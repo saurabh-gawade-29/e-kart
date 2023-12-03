@@ -10,7 +10,7 @@ const myCardImgStyle = {
   objectFit: "contain",
 };
 
-const Cards = ({ item }) => {
+const Cards = ({ item, btn }) => {
   const dispatch = useDispatch();
   //!Use Dispatch
   const addToCart = (product) => {
@@ -20,7 +20,9 @@ const Cards = ({ item }) => {
   debugger;
   return (
     <Card className="shadow wrap-card rounded">
-      <span className="text-white rating rounded">⭐{item.rating.rate}</span>
+      <span className="text-white rating rounded text-truncate">
+        ⭐{item.rating.rate}
+      </span>
       <Card.Img
         variant="top"
         src={item.image}
@@ -44,7 +46,7 @@ const Cards = ({ item }) => {
           {item.description}
         </Card.Text>
         <Button variant="secondary rounded" onClick={() => addToCart(item)}>
-          Add To Cart
+          {btn}
         </Button>
       </Card.Body>
     </Card>

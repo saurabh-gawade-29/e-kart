@@ -30,7 +30,7 @@ const Product = () => {
     console.log(items, "items");
     return (
       <Col sm={12} md={4} lg={3} key={i} className="mb-4">
-        <Cards item={items} />
+        <Cards item={items} btn={"Add to cart"} />
       </Col>
     );
   });
