@@ -2,8 +2,12 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux/es/hooks/useSelector";
 
 function Navbaar() {
+  const cartProducts = useSelector((state) => {
+    return state.cart;
+  });
   return (
     <Navbar
       expand="lg"
@@ -26,7 +30,7 @@ function Navbaar() {
           </Nav>
           <Nav>
             <Nav.Link to="/cart" as={Link} className="navLink">
-              MY BAG 0
+              MY BAG {cartProducts.length}
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>

@@ -5,17 +5,21 @@ import Navbaar from "./Navbaar";
 import Footer from "./Footer";
 import Spinner from "./Spinner";
 import ScrolTop from "./ScrolTop";
+import store from "../store/store";
+import { Provider } from "react-redux";
 
 const Rootlayout = () => {
   return (
     <>
-      <Navbaar />
-      <Container>
-        <Outlet />
-        <Spinner />
-      </Container>
-      <ScrolTop />
-      <Footer />
+      <Provider store={store}>
+        <Navbaar />
+        <Container>
+          <Outlet />
+          <Spinner />
+        </Container>
+        <ScrolTop />
+        <Footer />
+      </Provider>
     </>
   );
 };

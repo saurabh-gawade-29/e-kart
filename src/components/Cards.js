@@ -2,20 +2,29 @@ import React from "react";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import PropTypes from "prop-types";
+import { useDispatch } from "react-redux";
+import { add } from "../store/cartSlice";
 
 const myCardImgStyle = {
   height: "200px",
   objectFit: "contain",
 };
+
 const Cards = ({ item }) => {
+  const dispatch = useDispatch();
+  //!Use Dispatch
+  const addToCart = (product) => {
+    // Dispatch on add action
+    dispatch(add(product));
+  };
   debugger;
   return (
-    <Card className="shadow wrap-card">
-      <span className="text-white rating">⭐{item.rating.rate}</span>
+    <Card className="shadow wrap-card rounded">
+      <span className="text-white rating rounded">⭐{item.rating.rate}</span>
       <Card.Img
         variant="top"
         src={item.image}
-        className="img-fluid"
+        className="img-fluid rounded"
         style={myCardImgStyle}
       />
       <Card.Body className="bg-card-body">
@@ -34,7 +43,9 @@ const Cards = ({ item }) => {
         >
           {item.description}
         </Card.Text>
-        <Button variant="secondary">Add To Cart</Button>
+        <Button variant="secondary rounded" onClick={() => addToCart(item)}>
+          Add To Cart
+        </Button>
       </Card.Body>
     </Card>
   );

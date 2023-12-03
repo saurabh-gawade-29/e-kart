@@ -17,9 +17,13 @@ const Product = () => {
   //! Using Async Await
   const getData = async () => {
     debugger;
-    let resp = await trackPromise(fetch(baseURL));
-    let parsedData = await resp.json();
-    getProducts(parsedData);
+    try {
+      let resp = await trackPromise(fetch(baseURL));
+      let parsedData = await resp.json();
+      getProducts(parsedData);
+    } catch (error) {
+      alert(error + "");
+    }
   };
 
   const mappedCards = products.map((items, i) => {
