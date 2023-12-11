@@ -3,7 +3,7 @@ import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import PropTypes from "prop-types";
 import { useDispatch } from "react-redux";
-import { add } from "../store/cartSlice";
+import { add, remove } from "../store/cartSlice";
 
 const myCardImgStyle = {
   height: "200px",
@@ -16,6 +16,11 @@ const Cards = ({ item, btn }) => {
   const addToCart = (product) => {
     // Dispatch on add action
     dispatch(add(product));
+  };
+
+  const removeFromCart = (product) => {
+    // Dispatch and remove action
+    dispatch(remove(product));
   };
   debugger;
   return (
@@ -45,7 +50,12 @@ const Cards = ({ item, btn }) => {
         >
           {item.description}
         </Card.Text>
-        <Button variant="secondary rounded" onClick={() => addToCart(item)}>
+        <Button
+          variant="secondary rounded"
+          onClick={() =>
+            btn === "Remove" ? removeFromCart(item) : addToCart(item)
+          }
+        >
           {btn}
         </Button>
       </Card.Body>

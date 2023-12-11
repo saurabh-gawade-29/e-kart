@@ -9,20 +9,24 @@ const Cart = () => {
   const mappedCards = products.map((items, i) => {
     console.log(items, "items");
     return (
-      <Col sm={12} md={4} lg={3} key={i} className="mb-4">
-        <Cards item={items} btn={"Remove"} />
-      </Col>
+      <>
+        <Col sm={12} md={4} lg={3} key={i} className="mb-4">
+          <Cards item={items} btn={"Remove"} />
+        </Col>
+      </>
     );
   });
+  const totalPrice = products.reduce((acc, product) => acc + product.price, 0);
 
   return (
     <div>
       <h1 className="" style={{ marginTop: "4rem" }}>
-        Cart - Work in progress
+        Items in your bag:
       </h1>
       <div className="my-4">
         <Row className="m-0">{mappedCards}</Row>
       </div>
+      <h2 className="wrapTotal">Total: ₹ {totalPrice.toFixed(2)}</h2>
     </div>
   );
 };
